@@ -1,0 +1,32 @@
+
+{
+  "MobileData": [
+    {
+      "Name": "Apple Iphone 7",
+      "Price": 50000,
+       "Speci": "The phone comes with a 4.70-inch touchscreen display with a resolution of 750 pixels by 1334 pixels at a PPI of 326 pixels per inch"
+    },
+{
+      "Name": "Samsung Galaxy S3",
+      "Price": 36000,
+       "Speci": "Android 4.0.4, 4.3. 16/32/64GB storage, microSD card slot. 3.9% 66,050,730 hits. 1886 Become a fan. 4.8 7201280 pixels. 8MP. 1GB RAM. Exynos 4412 Qua 2100mAh"
+    },
+    {
+      "Name": "Oppo F1",
+      "Price": 15500,
+       "Speci": "The phone comes with a 5.00-inch touchscreen display with a resolution of 720 pixels by 1280 pixels at a PPI of 294 pixels per inch"
+    },
+    {
+      "Name": "Asus ZenFone 5",
+      "Price": 13000,
+       "Speci": "The Asus ZenFone 5 is powered by 1.6GHz dual-core Intel Atom Z2560 processor and it comes with 2GB of RAM."
+    },
+    {
+      "Name": "Vivo Y15",
+      "Price": 13000,
+       "Speci": " The phone comes with a 4.50-inch touchscreen display with a resolution of 480 pixels by 854 pixels at a PPI of 218 pixels per inch"
+    }
+    
+     ]
+}
+

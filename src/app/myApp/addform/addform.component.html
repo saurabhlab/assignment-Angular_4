@@ -1,0 +1,107 @@
+<div class=" background">
+  <h1>Saurabh Mobile Shopee</h1>
+  <h3>Following are the mobiles name and there specification with price </h3>
+ 
+
+  <button (click)="backtoindex()" class="btn btn-small btn-info pull-right">Back</button><br>
+ <hr>
+
+ <div class="panel panel-primary bx" *ngIf="!vName; else frminfo" >
+        <div class="panel-heading">Customer Deatil Form</div>
+        <div class="panel-body">
+
+
+  
+      <form [formGroup]="frm ">
+                <br>
+                <div class="form-group">
+                    <label >NAME:</label>
+                    <input type="text" name="Name" formControlName="Name" required class="form-control col-lg-12" id="nm">
+                    <!--<div class="alert" *ngIf="!frm.controls['Name'].valid && frm.controls['Name'].touched 
+     && frm.controls['Name'].dirty">{{req}} </div>-->
+
+                    <div class="alert alert-danger" *ngIf="!frm.controls['Name'].valid && frm.controls['Name'].touched ">{{req}}</div>
+                    <!--<div class="alert" *ngIf="nm.errors.required && nm.touched">sssss</div>-->
+
+                </div>
+                
+
+                
+                <div class="form-group">
+                    <label >Age:</label>
+                    <input type="number" name="Age" formControlName="Age" required class="form-control col-lg-12">
+                    <!--<div class="alert" *ngIf="!frm.controls['Age'].valid && frm.controls['Age'].touched && frm.controls['Age'].errors.required">{{req}} </div>-->
+                    <div class="alert alert-danger" *ngIf="!frm.controls['Age'].valid && frm.controls['Age'].touched ">{{req}} and only number</div>
+                </div>
+                <div class="form-group  ">
+                    <label >GENDER:</label>
+                    <div>
+                        <label class="center-block "><input type="radio" formControlName="Gender" value="Male">Male</label>
+                        <label class="center-block"><input type="radio" formControlName="Gender" value="Female">Female</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="center-block ">State:
+      <select class="form-control col-lg-12 "  formControlName="State">
+          <option *ngFor="let st of States" [value]="st.SName" [selected]="">{{st.SName}}</option>
+      </select>
+    </label>
+                </div>
+
+
+
+                <div class="form-group">
+                    <label class="center-block ">City:
+      <select class="form-control col-lg-12" formControlName="City">
+          <option *ngFor="let ct of Cities" [value]="ct.SName">{{ct.SName}}</option>
+      </select>
+    </label>
+                </div>
+
+                
+
+                <div class="form-group">
+                    <label>DOB:</label>
+                   
+                    <!--<input type="text" name="Address" formControlName="Address" class="form-control col-lg-12">-->
+                <p-calendar formControlName="DOB" icon="fa-calendar"></p-calendar>
+                </div>
+
+
+
+          <button class="btn btn-success" (click)="onSave(frm.value)" [disabled]="!frm.valid">SAVE</button>
+    </form>
+ 
+ 
+ 
+  </div>  </div>  </div>
+<ng-template #frminfo>
+
+    <table class="table table-bordered table-striped">
+        <tr class="success" style="color:black">
+            <th>NAME</th>
+            <th>AGE</th>
+            <th>Gender</th>
+            <th>State</th>
+            <th>City</th>
+           
+            <th>DOB</th>
+        </tr>
+
+        <tr>
+            <td>{{vName}} </td>
+            <td> {{vAge}}</td>
+            <td> {{vGender}}</td>
+            <td> {{vState}}</td>
+            <td> {{vCity}}</td>
+            
+            <td> {{vDOB}}</td>
+        </tr>
+    </table>
+
+</ng-template>
+
+
+
+
+  <div>

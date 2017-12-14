@@ -1,0 +1,24 @@
+<div class=" background"> 
+<h1>Saurabh Mobile Shopee</h1>
+<h3>Following are the mobiles name and there specification with price </h3>
+
+<button (click)="addForm()" class="btn btn-small btn-info pull-right">Add Form</button><br>
+<hr>
+
+
+
+<div>
+<h4  *ngFor="let data of mobileData">
+    <div   class="bx">
+Mobile  :- {{data.Name}}<br>
+Price   :- {{data.Price}}<br>
+Feature :- {{data.Speci}}
+</div>
+<p></p>
+</h4>
+
+</div>
+
+
+
+</div>
